@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^3.26.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "next": "15.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "tailwind-merge": "^2.5.5"
+    "tailwind-merge": "^2.5.5",
+    "useref": "^1.4.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

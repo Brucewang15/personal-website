@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -12,7 +12,7 @@ export const DirectionAwareHover = ({
     imageClassName,
     className,
 }: {
-    imageUrl: string;
+    imageUrl: StaticImageData;
     children: React.ReactNode | string;
     childrenClassName?: string;
     imageClassName?: string;
@@ -66,18 +66,18 @@ export const DirectionAwareHover = ({
             onMouseEnter={handleMouseEnter}
             ref={ref}
             className={cn(
-                "w-full bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 rounded-lg p-[3px] overflow-hidden group/card relative",
+                "w-full h-full rounded-lg p-[3px] overflow-hidden group/card relative",
                 className
             )}
         >
             <AnimatePresence mode="wait">
                 <motion.div
-                    className="relative h-full w-full bg-transparent rounded-lg"
+                    className="relative w-full h-full bg-transparent rounded-lg"
                     initial="initial"
                     whileHover={direction}
                     exit="exit"
                 >
-                    <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500" />
+                    <motion.div className="group-hover/card:block hidden absolute top-[-1%] left-[-1%] w-[102%] h-[102%] bg-black/50 z-10 transition rounded-lg  duration-500" />
                     <motion.div
                         variants={variants}
                         className="h-full w-full relative bg-gray-50 dark:bg-black rounded-lg"
@@ -89,11 +89,9 @@ export const DirectionAwareHover = ({
                         <Image
                             alt="image"
                             className={cn(
-                                "h-full w-full object-cover scale-[1.15]",
+                                "h-full w-full object-cover scale-[1.2]",
                                 imageClassName
                             )}
-                            width={1000}
-                            height={1000}
                             src={imageUrl}
                         />
                     </motion.div>
@@ -163,7 +161,7 @@ const textVariants = {
         opacity: 1,
     },
     right: {
-        x: 2,
+        x: 20,
         opacity: 1,
     },
 };

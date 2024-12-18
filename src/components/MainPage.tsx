@@ -1,3 +1,5 @@
+"use client"
+import Experience from "./Experience"
 import Projects from "./Projects"
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision"
 import { ShootingStars } from "./ui/stars-background"
@@ -9,6 +11,7 @@ const MainPage = () => {
             <ShootingStars />
         </div>
 
+        <Experience />
         <Projects />
     </>
 }
