@@ -48,9 +48,10 @@ const Projects = () => {
 
     const handleOpen = (link: string) => {
         if (typeof window !== "undefined") {
-            window.open(link, "_blank");
+            window.open(link, "_blank", "noopener,noreferrer");
         }
     };
+    
 
     return (
         <div className="w-[80%] justify-center text-center mx-[10%] flex flex-col gap-10">

@@ -2,7 +2,6 @@
 import Experience from "./Experience"
 import Projects from "./Projects"
 import Skills from "./Skills"
-import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision"
 import { ShootingStars } from "./ui/stars-background"
 
 
