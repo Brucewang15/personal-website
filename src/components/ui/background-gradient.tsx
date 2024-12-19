@@ -40,7 +40,7 @@ export const BackgroundGradient = ({
                     backgroundSize: animate ? "300% 300%" : undefined, // Reduce the size for a more subtle effect
                 }}
                 className={cn(
-                    "absolute inset-0 rounded-3xl z-[1] opacity-50 group-hover:opacity-80 blur-md transition duration-500 will-change-transform",
+                    "absolute inset-0 rounded-3xl z-[1] opacity-50 group-hover:opacity-80 transition duration-500 will-change-transform", //blur here if i want to add it back
                     "bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]"
                 )}
             />
