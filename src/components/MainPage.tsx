@@ -1,28 +1,44 @@
 "use client"
-import Experience from "./Experience"
-import Projects from "./Projects"
-import Skills from "./Skills"
+
 import dynamic from "next/dynamic";
-import Footer from './Footer'
+import { useState, useEffect } from "react";
 
-// Dynamically import ShootingStars with SSR disabled
-const ShootingStars = dynamic(() => import("./ui/stars-background").then((mod) => mod.ShootingStars), {
-    ssr: false,
-});
+// Dynamically import all four components with SSR disabled
+const Experience = dynamic(() => import("./Experience"), { ssr: false });
+const Projects = dynamic(() => import("./Projects"), { ssr: false });
+const Skills = dynamic(() => import("./Skills"), { ssr: false });
+const Footer = dynamic(() => import("./Footer"), { ssr: false });
 
-
+const ShootingStars = dynamic(() =>
+    import("./ui/stars-background").then((mod) => mod.ShootingStars),
+    { ssr: false }
+);
 
 const MainPage = () => {
-    return <>
-        <div className="min-h-screen rounded-md bg-black flex flex-col items-center justify-center relative w-full">
-            <ShootingStars />
-        </div>
+    const [mounted, setMounted] = useState(false);
 
-        <Experience />
-        <Skills />
-        <Projects />
-        <Footer />
-    </>
-}
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
-export default MainPage
+    return (
+        <>
+            <div className="min-h-screen rounded-md bg-black flex flex-col items-center justify-center relative w-full">
+                {mounted && <ShootingStars />}
+                <div className="h-screen w-full md:p-32">
+                    <div className="text-4xl font-bold">
+                        Hi I'm Bruce Wang <br />
+                        And I'm a
+                    </div>
+                </div>
+            </div>
+
+            <Experience />
+            <Skills />
+            <Projects />
+            <Footer />
+        </>
+    );
+};
+
+export default MainPage;

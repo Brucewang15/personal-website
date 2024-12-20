@@ -1,4 +1,4 @@
-
+"use client"
 import Image from "next/image";
 import MainPage from "../components/MainPage"
 

@@ -58,7 +58,6 @@ const Experience = () => {
                             </div>
                         </div>
                     </BackgroundGradient>
-
                 </div>
             ))}
 

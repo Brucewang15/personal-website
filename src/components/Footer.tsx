@@ -1,3 +1,4 @@
+"use client"
 import { FloatingDock } from "./ui/floating-dock"
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {IconHome} from '@tabler/icons-react'
