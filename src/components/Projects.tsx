@@ -53,8 +53,8 @@ const Projects = () => {
 
 
     return (
-        <div className="w-[80%] justify-center text-center mx-[10%] flex flex-col gap-10 mb-32">
-            <div className="lg:text-4xl sm:text-2xl font-bold">Projects</div>
+        <div className="w-[90%] lg:w-[70%] justify-center text-center mx-auto flex flex-col gap-10 mb-32">
+            <div className="text-2xl md:text-4xl font-bold">Projects</div>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
                 {imageList.map((project, index) => (
                     <a

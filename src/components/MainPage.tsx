@@ -2,6 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
+import { FlipWords } from "./ui/flip-words";
+import Header from "./Header";
 
 // Dynamically import all four components with SSR disabled
 const Experience = dynamic(() => import("./Experience"), { ssr: false });
@@ -17,25 +19,39 @@ const ShootingStars = dynamic(() =>
 const MainPage = () => {
     const [mounted, setMounted] = useState(false);
 
+    const words: string[] = ["a Software Engineer", "a Student", "an Innovator"]
+
     useEffect(() => {
         setMounted(true);
     }, []);
 
     return (
         <>
-            <div className="min-h-screen rounded-md bg-black flex flex-col items-center justify-center relative w-full">
-                {mounted && <ShootingStars />}
-                <div className="h-screen w-full md:p-32">
-                    <div className="text-4xl font-bold">
-                        Hi I'm Bruce Wang <br />
-                        And I'm a
-                    </div>
+
+            <div className="rounded-md bg-black flex flex-col items-center justify-center relative">
+                <Header />
+                {mounted && <ShootingStars className="fixed z-0" />}
+            </div>
+            <div className="w-[90%] lg:w-[70%] mx-auto py-10">
+                <div className="text-2xl md:text-4xl font-bold leading-none">
+                    Hi I'm Bruce Wang <br />
+                    <span className="block mt-4 leading-relaxed">And I'm <FlipWords words={words} /></span>
+                </div>
+
+                <div className="mt-8 text-base md:text-xl lg:pr-20">
+                    Hi! I'm Bruce Wang, a Computer Science student at the University of Waterloo. 
                 </div>
             </div>
 
-            <Experience />
+            {/* Add ids to these sections so the navigation links can anchor to them */}
+            <div id="experience">
+                <Experience />
+            </div>
             <Skills />
-            <Projects />
+            <div id="projects">
+                <Projects />
+            </div>
+
             <Footer />
         </>
     );
