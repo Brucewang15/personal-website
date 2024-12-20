@@ -1,4 +1,3 @@
-// Skills.tsx
 "use client";
 
 import React from "react";
@@ -115,7 +114,7 @@ const Skills: React.FC = () => {
     const bottom: CarouselItem[] = skills.slice(half);
 
     return (
-        <div className="w-[80%] justify-center text-center mx-auto flex flex-col gap-10 mb-32">
+        <div className="sm:w-[90%] md:w-[80%] justify-center text-center mx-auto flex flex-col gap-10 mb-32">
             <div className="text-4xl  font-bold">Skills</div>
 
             {/* Infinite Carousel */}

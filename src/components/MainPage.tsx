@@ -2,7 +2,14 @@
 import Experience from "./Experience"
 import Projects from "./Projects"
 import Skills from "./Skills"
-import { ShootingStars } from "./ui/stars-background"
+import dynamic from "next/dynamic";
+import Footer from './Footer'
+
+// Dynamically import ShootingStars with SSR disabled
+const ShootingStars = dynamic(() => import("./ui/stars-background").then((mod) => mod.ShootingStars), {
+    ssr: false,
+});
+
 
 
 const MainPage = () => {
@@ -14,6 +21,7 @@ const MainPage = () => {
         <Experience />
         <Skills />
         <Projects />
+        <Footer />
     </>
 }
 

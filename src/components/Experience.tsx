@@ -45,7 +45,7 @@ const Experience = () => {
             <div className="text-4xl font-bold">Experience</div>
 
             {items.map((item, index) => (
-                <div className="">
+                <div key={index} className="">
                     <BackgroundGradient className="min-h-20 dark:bg-zinc-900 rounded-[22px] p-4 w-full">
                         <div className="flex flex-row h-full gap-5">
                             {item.icon}

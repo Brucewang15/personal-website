@@ -7,6 +7,7 @@ import { FaNodeJs, FaReact } from "react-icons/fa";
 import { SiFlask, SiPytorch, SiNumpy, SiMusicbrainz, SiDjango, SiSqlite, SiMysql } from "react-icons/si";
 import { StaticImageData } from "next/image";
 import { JSX } from "react";
+import Link from "next/link";
 
 type Project = {
     image: StaticImageData; // Image data
@@ -47,39 +48,38 @@ const Projects = () => {
     ];
 
     const handleOpen = (link: string) => {
-        if (typeof window !== "undefined") {
-            window.open(link, "_blank", "noopener,noreferrer");
-        }
+        window.open(link, "_blank", "noopener,noreferrer");
     };
-    
+
 
     return (
         <div className="w-[80%] justify-center text-center mx-[10%] flex flex-col gap-10 mb-32">
             <div className="lg:text-4xl sm:text-2xl font-bold">Projects</div>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
                 {imageList.map((project, index) => (
-                    <div
+                    <a
                         key={index}
-                        className="bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 p-[2px] rounded-lg overflow-hidden hover:cursor-pointer"
-                        onClick={() => handleOpen(project.link)}
+                        className="bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 p-[2px] rounded-lg overflow-hidden hover:cursor-pointer h-[100%] flex"
+                        target="_blank"
+                        href={project.link}
                     >
-                        <DirectionAwareHover className="rounded-lg" imageUrl={project.image}>
-                            <div className="font-semibold text-xl text-left mb-2">{project.title}</div>
-                            <div className="text-left text-base">{project.description}</div>
+                        <DirectionAwareHover className="rounded-lg w-full h-full flex flex-col justify-between" imageUrl={project.image}>
+                            <div>
+                                <div className="font-semibold text-xl text-left mb-2">{project.title}</div>
+                                <div className="text-left text-base">{project.description}</div>
+                            </div>
                             <div className="flex flex-wrap mt-4 gap-4">
                                 {project.techStack.map((tech, techIndex) => (
-                                    <div
-                                        key={techIndex}
-                                        className="flex items-center gap-2 px-1 rounded-md"
-                                    >
+                                    <div key={techIndex} className="flex items-center gap-2 px-1 rounded-md">
                                         {techIcons[tech]} {/* Render the icon */}
                                     </div>
                                 ))}
                             </div>
                         </DirectionAwareHover>
-                    </div>
+                    </a>
                 ))}
             </div>
+
         </div>
     );
 };
