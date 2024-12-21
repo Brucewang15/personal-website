@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Image, { StaticImageData } from "next/image";
 import React, { JSX, useEffect, useState } from "react";
 
 const InfiniteMovingCards = ({
@@ -85,7 +84,7 @@ const InfiniteMovingCards = ({
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
-                {items.map((item, idx) => (
+                {items.map((item) => (
                     <li
                         className="min-w-[90px] lg:min-w-[100px] relative flex flex-col items-center rounded-2xl flex-shrink-0 border-slate-700 md:px-2 md:gap-2"
                         key={item.name}

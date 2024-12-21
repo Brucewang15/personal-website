@@ -7,7 +7,6 @@ import { FaNodeJs, FaReact } from "react-icons/fa";
 import { SiFlask, SiPytorch, SiNumpy, SiMusicbrainz, SiDjango, SiSqlite, SiMysql } from "react-icons/si";
 import { StaticImageData } from "next/image";
 import { JSX } from "react";
-import Link from "next/link";
 
 type Project = {
     image: StaticImageData; // Image data
@@ -47,9 +46,7 @@ const Projects = () => {
         },
     ];
 
-    const handleOpen = (link: string) => {
-        window.open(link, "_blank", "noopener,noreferrer");
-    };
+    
 
 
     return (
