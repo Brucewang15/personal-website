@@ -12,7 +12,7 @@ const Header = () => {
     };
 
     return (
-        <div className="w-[90%] lg:w-[70%] mx-auto py-6 flex items-center justify-between bg-black text-white z-10">
+        <div className="w-[90%] lg:w-[70%] mx-auto py-6 flex items-center justify-between text-white z-10">
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
                 Bruce Wang &lt;/&gt;
             </div>
