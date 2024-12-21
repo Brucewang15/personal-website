@@ -72,7 +72,7 @@ const Aboutme = () => {
                 </div>
 
                 {/* Socials Section */}
-                <div className="rounded-lg border border-slate-700/75 p-6">
+                <div id="contact" className="rounded-lg border border-slate-700/75 p-6">
                     {/* Title */}
                     <div className="text-base font-bold mb-4 flex items-center gap-2">
                         <FiUsers />
