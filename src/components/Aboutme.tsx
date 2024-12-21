@@ -1,13 +1,11 @@
 import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import LocationCard from "./ui/globe";
 import { SiInstagram, SiDiscord, SiLinkedin, SiGithub } from "react-icons/si";
-import { FiMail, FiMapPin, FiUsers } from "react-icons/fi";
+import { FiMail, FiUsers } from "react-icons/fi";
 import { MdDownhillSkiing, MdMovie } from "react-icons/md";
 import { FaTableTennis, FaHeartbeat } from "react-icons/fa";
 import Icon from '@mdi/react';
 import { mdiBadminton } from '@mdi/js';
-import { GiMountainCave } from 'react-icons/gi'
 
 
 const Aboutme = () => {

@@ -6,7 +6,7 @@ import warg from './pictures/warg_logo.jpg'
 import first from './pictures/first_logo3.jpg'
 import tid from './pictures/topinfodev.png'
 import { JSX } from "react"
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 
 const Experience = () => {
 
