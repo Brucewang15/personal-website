@@ -2,9 +2,9 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import LocationCard from "./ui/globe";
 import { SiInstagram, SiDiscord, SiLinkedin, SiGithub } from "react-icons/si";
-import { FiMail, FiMapPin } from "react-icons/fi";
+import { FiMail, FiMapPin, FiUsers } from "react-icons/fi";
 import { MdDownhillSkiing, MdMovie } from "react-icons/md";
-import { FaTableTennis } from "react-icons/fa";
+import { FaTableTennis, FaHeartbeat } from "react-icons/fa";
 import Icon from '@mdi/react';
 import { mdiBadminton } from '@mdi/js';
 import { GiMountainCave } from 'react-icons/gi'
@@ -73,7 +73,7 @@ const Aboutme = () => {
                 <div className="rounded-lg border border-slate-700/75 p-6">
                     {/* Title */}
                     <div className="text-base font-bold mb-4 flex items-center gap-2">
-                        <FiMapPin />
+                        <FiUsers />
                         Socials
                     </div>
 
@@ -91,7 +91,7 @@ const Aboutme = () => {
                 {/* Hobbies Section */}
                 <div className="rounded-lg border border-slate-700/75 p-6">
                     <div className="text-base font-bold mb-4 flex items-center gap-2">
-                        <FiMapPin />
+                        <FaHeartbeat />
                         Hobbies
                     </div>
                     <div className="flex flex-col h-full gap-2 pl-2">
