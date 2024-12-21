@@ -2,7 +2,7 @@ import React from "react";
 import LocationCard from "./ui/globe";
 import { SiInstagram, SiDiscord, SiLinkedin, SiGithub } from "react-icons/si";
 import { FiMail, FiUsers } from "react-icons/fi";
-import { MdDownhillSkiing, MdMovie } from "react-icons/md";
+import { MdDownhillSkiing, MdMovie, MdPiano } from "react-icons/md";
 import { FaTableTennis, FaHeartbeat } from "react-icons/fa";
 import Icon from '@mdi/react';
 import { mdiBadminton } from '@mdi/js';
@@ -53,6 +53,10 @@ const Aboutme = () => {
             name: "Movies",
             icon: <MdMovie />,
         },
+        {
+            name: "Piano",
+            icon: <MdPiano />
+        }
     ];
 
     return (
