@@ -74,7 +74,7 @@ const Skills: React.FC = () => {
 
         // New Icons
         "Next.js": <SiNextdotjs className="text-white text-4xl" />,
-        "Tailwind CSS": <SiTailwindcss className="text-white text-4xl" />,
+        "Tailwind": <SiTailwindcss className="text-white text-4xl" />,
         PostgreSQL: <SiPostgresql className="text-white text-4xl" />,
         Docker: <SiDocker className="text-white text-4xl" />,
         TypeScript: <SiTypescript className="text-white text-4xl" />,
@@ -95,7 +95,7 @@ const Skills: React.FC = () => {
         { icon: techIcons["Flask"], name: "Flask" },
         { icon: techIcons["NumPy"], name: "NumPy" },
         { icon: techIcons["Next.js"], name: "Next.js" },
-        { icon: techIcons["Tailwind CSS"], name: "Tailwind CSS" },
+        { icon: techIcons["Tailwind"], name: "Tailwind" },
         { icon: techIcons["PostgreSQL"], name: "PostgreSQL" },
         { icon: techIcons["Docker"], name: "Docker" },
         { icon: techIcons["TypeScript"], name: "TypeScript" },
