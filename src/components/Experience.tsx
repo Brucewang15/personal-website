@@ -41,7 +41,7 @@ const Experience = () => {
 
     return <>
 
-        <div className="w-[90%] lg:w-[50%] flex flex-col justify-center text-center mx-auto gap-6 mb-32">
+        <div className="w-[90%] lg:w-[50%] flex flex-col justify-center text-center mx-auto gap-6 mb-24">
 
             <div className="text-2xl md:text-4xl font-bold">Experience</div>
 

@@ -60,7 +60,7 @@ const Aboutme = () => {
     ];
 
     return (
-        <div className="w-[90%] lg:w-[70%] mx-auto z-20 mb-32">
+        <div className="w-[90%] lg:w-[70%] mx-auto z-20 mb-24">
             {/* Title */}
             <div className="text-2xl md:text-4xl font-bold text-center mb-6">About Me</div>
 
