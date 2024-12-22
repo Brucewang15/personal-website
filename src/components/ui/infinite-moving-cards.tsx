@@ -89,7 +89,7 @@ const InfiniteMovingCards = ({
                         className="min-w-[90px] lg:min-w-[100px] relative flex flex-col items-center rounded-2xl flex-shrink-0 border-slate-700 md:px-2 md:gap-2"
                         key={item.name}
                     >
-                        <div>{item.icon}</div>
+                        <div className="text-black dark:text-white">{item.icon}</div>
                         <div className="font-bold">{item.name}</div>
 
                     </li>
