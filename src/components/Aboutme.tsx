@@ -1,6 +1,6 @@
 import React from "react";
 import LocationCard from "./ui/globe";
-import { SiInstagram, SiDiscord, SiLinkedin, SiGithub } from "react-icons/si";
+import { SiInstagram, SiYoutube, SiLinkedin, SiGithub } from "react-icons/si";
 import { FiMail, FiUsers } from "react-icons/fi";
 import { MdDownhillSkiing, MdMovie, MdPiano } from "react-icons/md";
 import { FaTableTennis, FaHeartbeat } from "react-icons/fa";
@@ -21,11 +21,6 @@ const Aboutme = () => {
             link: "https://www.instagram.com/bruce_w.15/",
         },
         {
-            name: "Discord",
-            icon: <SiDiscord />,
-            link: ""
-        },
-        {
             name: "GitHub",
             icon: <SiGithub />,
             link: "https://github.com/Brucewang15"
@@ -34,7 +29,12 @@ const Aboutme = () => {
             name: "Email",
             icon: <FiMail />,
             link: "mailto:bruce.wang15@outlook.com"
-        }
+        },
+        {
+            name: "YouTube",
+            icon: <SiYoutube />,
+            link: "https://www.youtube.com/@IHASPROS"
+        },
     ];
     const hobbies = [
         {
