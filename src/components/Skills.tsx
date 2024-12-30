@@ -115,7 +115,7 @@ const Skills: React.FC = () => {
 
     return (
         <div className="overflow-hidden w-[90%] md:w-[70%] justify-center text-center mx-auto flex flex-col gap-10 mb-24">
-            <div className="text-2xl md:text-4xl  font-bold">Skills</div>
+            <div className="text-2xl md:text-4xl font-bold">Skills</div>
 
             {/* Infinite Carousel */}
 
