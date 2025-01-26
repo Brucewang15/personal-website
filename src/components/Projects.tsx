@@ -3,17 +3,33 @@
 import { DirectionAwareHover } from "./ui/direction-aware-hover";
 import Tune2keys from "./pictures/Tune2keys.png";
 import watclub from "./pictures/watclub.png";
+import SoccerMetric from "./pictures/soccermetric.png";
 import { FaNodeJs, FaReact } from "react-icons/fa";
-import { SiFlask, SiPytorch, SiNumpy, SiMusicbrainz, SiDjango, SiSqlite, SiMysql } from "react-icons/si";
-import { StaticImageData } from "next/image";
+import {
+    SiFlask,
+    SiMediapipe,
+    SiPytorch,
+    SiNumpy,
+    SiMusicbrainz,
+    SiDjango,
+    SiSqlite,
+    SiMysql,
+    SiTensorflow,
+    SiOpencv,
+    SiPandas,
+    SiOpenai,
+    SiTailwindcss,
+} from "react-icons/si";
+import yolo from "./pictures/Yolo.svg";
+import Image, { StaticImageData } from "next/image";
 import { JSX } from "react";
 
 type Project = {
-    image: StaticImageData; // Image data
-    title: string; // Project title
-    description: string; // Project description
-    techStack: string[]; // List of technologies
-    link: string; // GitHub or live project link
+    image: StaticImageData;
+    title: string;
+    description: string;
+    techStack: string[];
+    link: string;
 };
 
 const Projects = () => {
@@ -27,6 +43,13 @@ const Projects = () => {
         SQLite: <SiSqlite className="text-blue-500 text-4xl" />,
         React: <FaReact className="text-blue-400 text-4xl" />,
         SQL: <SiMysql className="text-orange-500 text-4xl" />,
+        TensorFlow: <SiTensorflow className="text-orange-400 text-4xl" />,
+        OpenCV: <SiOpencv className="text-blue-600 text-4xl" />,
+        Pandas: <SiPandas className="text-yellow-500 text-4xl" />,
+        OpenAI: <SiOpenai className="text-black text-4xl" />,
+        TailwindCSS: <SiTailwindcss className="text-teal-500 text-4xl" />,
+        Ultralytics: <Image src={yolo} alt="yolo" width={36} height={36} />,
+        MediaPipe: <SiMediapipe className="text-teal-500 text-4xl" />,
     };
 
     const imageList: Project[] = [
@@ -34,20 +57,33 @@ const Projects = () => {
             image: watclub,
             title: "WatClub",
             description: "A Club Rating Platform for University of Waterloo students",
-            techStack: ["Node.js", "SQLite", "Django", "React"],
-            link: "https://github.com/Brucewang15/WatClub",
+            techStack: ["React", "Django", "SQLite", "TensorFlow", "NumPy"],
+            link: "https://github.com/Brucewang15/WatClub"
+        },
+        {
+            image: SoccerMetric,
+            title: "SoccerMetric",
+            description: "A soccer analysis platform for tracking player performance",
+            techStack: [
+                "Ultralytics",
+                "MediaPipe",
+                "Pandas",
+                "OpenCV",
+                "OpenAI",
+                "React",
+                "Flask",
+                "TailwindCSS"
+            ],
+            link: "https://github.com/gordonzhang1/SoccerMetrics"
         },
         {
             image: Tune2keys,
             title: "Tune2Keys",
             description: "Transforms audio, MIDI, and PDF files into rendered sheet music.",
-            techStack: ["Node.js", "Flask", "PyTorch", "NumPy", "Music21"],
-            link: "https://github.com/jglu/tune2key",
-        },
+            techStack: ["React", "Flask", "PyTorch", "NumPy", "Music21"],
+            link: "https://github.com/jglu/tune2key"
+        }
     ];
-
-    
-
 
     return (
         <div className="w-[90%] lg:w-[70%] justify-center text-center mx-auto flex flex-col gap-10 mb-32">
@@ -60,15 +96,25 @@ const Projects = () => {
                         target="_blank"
                         href={project.link}
                     >
-                        <DirectionAwareHover className="rounded-lg w-full h-full flex flex-col justify-between" imageUrl={project.image}>
+                        <DirectionAwareHover
+                            className="rounded-lg w-full h-full flex flex-col justify-between"
+                            imageUrl={project.image}
+                        >
                             <div>
-                                <div className="font-semibold text-xl text-left mb-2">{project.title}</div>
-                                <div className="text-left text-base">{project.description}</div>
+                                <div className="font-semibold text-xl text-left mb-2">
+                                    {project.title}
+                                </div>
+                                <div className="text-left text-base">
+                                    {project.description}
+                                </div>
                             </div>
                             <div className="flex flex-wrap mt-4 gap-4">
                                 {project.techStack.map((tech, techIndex) => (
-                                    <div key={techIndex} className="flex items-center gap-2 px-1 rounded-md">
-                                        {techIcons[tech]} {/* Render the icon */}
+                                    <div
+                                        key={techIndex}
+                                        className="flex items-center gap-2 px-1 rounded-md"
+                                    >
+                                        {techIcons[tech]}
                                     </div>
                                 ))}
                             </div>
@@ -76,7 +122,6 @@ const Projects = () => {
                     </a>
                 ))}
             </div>
-
         </div>
     );
 };
