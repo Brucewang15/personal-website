@@ -46,7 +46,7 @@ const Projects = () => {
         TensorFlow: <SiTensorflow className="text-orange-400 text-4xl" />,
         OpenCV: <SiOpencv className="text-blue-600 text-4xl" />,
         Pandas: <SiPandas className="text-yellow-500 text-4xl" />,
-        OpenAI: <SiOpenai className="text-black text-4xl" />,
+        OpenAI: <SiOpenai className="text-white text-4xl" />,
         TailwindCSS: <SiTailwindcss className="text-teal-500 text-4xl" />,
         Ultralytics: <Image src={yolo} alt="yolo" width={36} height={36} />,
         MediaPipe: <SiMediapipe className="text-teal-500 text-4xl" />,
