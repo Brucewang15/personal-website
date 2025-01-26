@@ -29,8 +29,8 @@ export const DirectionAwareHover = ({
     ) => {
         if (!ref.current) return;
 
-        const direction = getDirection(event, ref.current);
-        switch (direction) {
+        const d = getDirection(event, ref.current);
+        switch (d) {
             case 0:
                 setDirection("top");
                 break;
@@ -56,6 +56,7 @@ export const DirectionAwareHover = ({
         const { width: w, height: h, left, top } = obj.getBoundingClientRect();
         const x = ev.clientX - left - (w / 2) * (w > h ? h / w : 1);
         const y = ev.clientY - top - (h / 2) * (h > w ? w / h : 1);
+        // The direction is 0=top, 1=right, 2=bottom, 3=left
         const d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
         return d;
     };
@@ -68,22 +69,18 @@ export const DirectionAwareHover = ({
                 "w-full h-full rounded-lg p-[3px] overflow-hidden group/card relative",
                 className
             )}
+            // Use 'whileHover' to pass the direction state to child variants
+            initial="initial"
+            whileHover={direction}
+            exit="exit"
         >
             <AnimatePresence mode="wait">
                 <motion.div
                     className="relative w-full h-full bg-transparent rounded-lg"
-                    initial="initial"
-                    whileHover={direction}
-                    exit="exit"
                 >
-                    <motion.div className="group-hover/card:block hidden absolute top-[-1%] left-[-1%] w-[102%] h-[102%] bg-black/50 z-10 transition rounded-lg  duration-500" />
+                    {/* Remove variants={variants} for the image container so it stays still */}
                     <motion.div
-                        variants={variants}
                         className="h-full w-full relative bg-gray-50 dark:bg-black rounded-lg"
-                        transition={{
-                            duration: 0.2,
-                            ease: "easeOut",
-                        }}
                     >
                         <Image
                             alt="image"
@@ -94,6 +91,8 @@ export const DirectionAwareHover = ({
                             src={imageUrl}
                         />
                     </motion.div>
+
+                    {/* Keep the text's directional animation */}
                     <motion.div
                         variants={textVariants}
                         transition={{
@@ -111,29 +110,6 @@ export const DirectionAwareHover = ({
             </AnimatePresence>
         </motion.div>
     );
-};
-
-const variants = {
-    initial: {
-        x: 0,
-    },
-
-    exit: {
-        x: 0,
-        y: 0,
-    },
-    top: {
-        y: 20,
-    },
-    bottom: {
-        y: -20,
-    },
-    left: {
-        x: 20,
-    },
-    right: {
-        x: -20,
-    },
 };
 
 const textVariants = {
