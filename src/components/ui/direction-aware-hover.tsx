@@ -57,8 +57,7 @@ export const DirectionAwareHover = ({
         const x = ev.clientX - left - (w / 2) * (w > h ? h / w : 1);
         const y = ev.clientY - top - (h / 2) * (h > w ? w / h : 1);
         // The direction is 0=top, 1=right, 2=bottom, 3=left
-        const d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
-        return d;
+        return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
     };
 
     return (
@@ -69,30 +68,28 @@ export const DirectionAwareHover = ({
                 "w-full h-full rounded-lg p-[3px] overflow-hidden group/card relative",
                 className
             )}
-            // Use 'whileHover' to pass the direction state to child variants
             initial="initial"
             whileHover={direction}
             exit="exit"
         >
             <AnimatePresence mode="wait">
-                <motion.div
-                    className="relative w-full h-full bg-transparent rounded-lg"
-                >
-                    {/* Remove variants={variants} for the image container so it stays still */}
+                <motion.div className="relative w-full h-full bg-transparent rounded-lg">
+                    {/* Dark overlay appears on hover */}
                     <motion.div
-                        className="h-full w-full relative bg-gray-50 dark:bg-black rounded-lg"
-                    >
+                        className="group-hover/card:block hidden absolute inset-0 bg-black/50 z-10 transition duration-500 rounded-lg"
+                    />
+                    <motion.div className="h-full w-full relative bg-gray-50 dark:bg-black rounded-lg">
                         <Image
                             alt="image"
                             className={cn(
-                                "h-full w-full object-cover scale-[1.21]",
+                                "h-full w-full object-cover", // Removed scale-[1.21]
                                 imageClassName
                             )}
                             src={imageUrl}
                         />
                     </motion.div>
 
-                    {/* Keep the text's directional animation */}
+                    {/* Text still uses directional animation */}
                     <motion.div
                         variants={textVariants}
                         transition={{
