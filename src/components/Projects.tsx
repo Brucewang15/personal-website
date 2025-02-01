@@ -4,6 +4,7 @@ import { DirectionAwareHover } from "./ui/direction-aware-hover";
 import Tune2keys from "./pictures/Tune2keys.png";
 import watclub from "./pictures/watclub.png";
 import SoccerMetric from "./pictures/soccermetric.png";
+import theraAI from './pictures/theraAI.png'
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import {
     SiFlask,
@@ -19,10 +20,13 @@ import {
     SiPandas,
     SiOpenai,
     SiTailwindcss,
+    SiNextdotjs,
+    SiGooglecloud
 } from "react-icons/si";
 import yolo from "./pictures/Yolo.svg";
 import Image, { StaticImageData } from "next/image";
 import { JSX } from "react";
+import { TbHeartExclamation } from "react-icons/tb";
 
 type Project = {
     image: StaticImageData;
@@ -50,6 +54,8 @@ const Projects = () => {
         TailwindCSS: <SiTailwindcss className="text-teal-500 text-4xl" />,
         Ultralytics: <Image src={yolo} alt="yolo" width={36} height={36} />,
         MediaPipe: <SiMediapipe className="text-teal-500 text-4xl" />,
+        "Next.js": <SiNextdotjs className="text-black text-4xl" />,
+        "Google Cloud": <SiGooglecloud className="text-blue-600 text-4xl" />,
     };
 
     const imageList: Project[] = [
@@ -82,6 +88,13 @@ const Projects = () => {
             description: "Transforms audio, MIDI, and PDF files into rendered sheet music.",
             techStack: ["React", "Flask", "PyTorch", "NumPy", "Music21"],
             link: "https://github.com/jglu/tune2key"
+        },
+        {
+            image: theraAI,
+            title: "TheraAI",
+            description: "A mental health platform that provides therapy through AI.",
+            techStack: ["React", "Next.js", "Google Cloud", "TailwindCSS", "OpenAI"],
+            link: "https://github.com/dkaty123/TalkTuahTherapist"
         }
     ];
 
