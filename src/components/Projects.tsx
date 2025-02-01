@@ -26,7 +26,6 @@ import {
 import yolo from "./pictures/Yolo.svg";
 import Image, { StaticImageData } from "next/image";
 import { JSX } from "react";
-import { TbHeartExclamation } from "react-icons/tb";
 
 type Project = {
     image: StaticImageData;
