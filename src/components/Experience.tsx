@@ -13,9 +13,9 @@ const Experience = () => {
     const items: { icon: JSX.Element, job: string, place: string, time: string }[] = [
         {
             icon: <Image src={hppn} alt="icon" className="rounded-full h-14 w-auto" />,
-            job: 'Founding Software Engineer',
+            job: 'Software Engineer Intern',
             place: 'Hppn.ing',
-            time: 'Oct 2024 - Present'
+            time: 'Sept 2024 - Present'
 
         },
         {
@@ -26,14 +26,14 @@ const Experience = () => {
         },
         {
             icon: <Image src={tid} alt="icon" className="rounded-full h-14 w-14 object-scale-down bg-white" />,
-            job: 'Software Engineer Intern',
+            job: 'Full-Stack Developer Intern',
             place: "TopInfoDev Solutions",
             time: 'May 2024 - Sept 2024'
 
         },
         {
             icon: <Image src={first} alt="icon" className="rounded-full h-14 w-14 bg-white object-contain" />,
-            job: 'Lead Software and Hardware Engineer',
+            job: 'Lead Robotics Engineer',
             place: "FIRST Robotics",
             time: 'Sept 2020 - Feb 2024'
         }   
