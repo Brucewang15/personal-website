@@ -34,7 +34,7 @@ const Experience = () => {
         {
             icon: <Image src={first} alt="icon" className="rounded-full h-14 w-14 bg-white object-contain" />,
             job: 'Lead Robotics Engineer',
-            place: "FIRST Robotics",
+            place: "FIRST Tech Challenge",
             time: 'Sept 2020 - Feb 2024'
         }   
     ]
