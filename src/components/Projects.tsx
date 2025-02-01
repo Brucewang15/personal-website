@@ -53,7 +53,7 @@ const Projects = () => {
         TailwindCSS: <SiTailwindcss className="text-teal-500 text-4xl" />,
         Ultralytics: <Image src={yolo} alt="yolo" width={36} height={36} />,
         MediaPipe: <SiMediapipe className="text-teal-500 text-4xl" />,
-        "Next.js": <SiNextdotjs className="text-black text-4xl" />,
+        "Next.js": <SiNextdotjs className="text-white text-4xl" />,
         "Google Cloud": <SiGooglecloud className="text-blue-600 text-4xl" />,
     };
 
