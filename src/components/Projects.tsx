@@ -84,7 +84,7 @@ const Projects = () => {
         {
             image: Tune2keys,
             title: "Tune2Keys",
-            description: "Transforms audio, MIDI, and PDF files into rendered sheet music.",
+            description: "ML model that transforms audio into sheet music.",
             techStack: ["React", "Flask", "PyTorch", "NumPy", "Music21"],
             link: "https://github.com/jglu/tune2key"
         },
