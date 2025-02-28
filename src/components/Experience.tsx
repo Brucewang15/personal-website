@@ -55,7 +55,7 @@ const Experience = () => {
                         <div className="flex flex-row h-full gap-5">
                             {item.icon}
                             <div className="w-full flex justify-between">
-                                <div className="flex flex-col text-left gap-2">
+                                <div className="flex flex-col text-left gap-1">
                                     <div className="font-bold text-base text-gray-100">{item.job}</div>
                                     <div className="text-sm text-gray-300 dark:text-gray-400">{item.place}</div>
                                 </div>
