@@ -61,7 +61,7 @@ const Experience = () => {
                                 </div>
                                 <div className="flex flex-col text-right">
                                     <div className="text-sm text-gray-300 font-semibold">{item.time}</div>
-                                    <div className="text-sm text-gray-300 font-semibold">{item.time}</div>
+                                    <div className="text-sm text-gray-300">{item.location}</div>
                                 </div>
 
                             </div>
