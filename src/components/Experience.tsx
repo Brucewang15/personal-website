@@ -12,14 +12,15 @@ const Experience = () => {
 
     const items: { icon: JSX.Element, job: string, place: string, time: string, location: string }[] = [
         {
-            icon: <Image src={hppn} alt="icon" className="rounded-full h-14 w-14 object-cover" />,
+            icon: <Image src={hppn} alt="icon" className="rounded-full h-14 w-auto" />,
             job: 'Software Engineer Intern',
             place: 'Hppn.ing',
             time: 'Sept 2024 - Present',
             location: 'Waterloo, ON'
+
         },
         {
-            icon: <Image src={warg} alt="icon" className="rounded-full h-14 w-14 object-cover" />,
+            icon: <Image src={warg} alt="icon" className="rounded-full h-14 w-auto" />,
             job: 'Autonomy Software Engineer',
             place: "Waterloo Aerial Robotics Group",
             time: 'Sept 2024 - Present',
@@ -31,6 +32,7 @@ const Experience = () => {
             place: "TopInfoDev Solutions",
             time: 'May 2024 - Sept 2024',
             location: 'Vancouver, BC'
+
         },
         {
             icon: <Image src={first} alt="icon" className="rounded-full h-14 w-14 bg-white object-contain" />,
@@ -41,35 +43,36 @@ const Experience = () => {
         }
     ]
 
-    return (
-        <div className="w-[90%] lg:w-[50%] flex flex-col justify-center text-center mx-auto gap-8 mb-24">
-            <h2 className="text-2xl md:text-4xl font-bold mb-2">Experience</h2>
+    return <>
 
-            <div className="flex flex-col gap-6">
-                {items.map((item, index) => (
-                    <div key={index}>
-                        <BackgroundGradient className="dark:bg-zinc-900 rounded-[22px] p-5 w-full">
-                            <div className="flex items-center gap-6">
-                                <div className="flex-shrink-0">
-                                    {item.icon}
+        <div className="w-[90%] lg:w-[50%] flex flex-col justify-center text-center mx-auto gap-6 mb-24">
+
+            <div className="text-2xl md:text-4xl font-bold">Experience</div>
+
+            {items.map((item, index) => (
+                <div key={index} className="">
+                    <BackgroundGradient className="min-h-20 dark:bg-zinc-900 rounded-[22px] p-4 w-full">
+                        <div className="flex flex-row h-full gap-5">
+                            {item.icon}
+                            <div className="w-full flex justify-between">
+                                <div className="flex flex-col text-left">
+                                    <div className="font-bold text-base text-gray-100">{item.job}</div>
+                                    <div className="text-sm text-gray-300 dark:text-gray-400">{item.place}</div>
                                 </div>
-                                <div className="w-full flex justify-between items-center">
-                                    <div className="flex flex-col text-left">
-                                        <h3 className="font-bold text-lg text-gray-100">{item.job}</h3>
-                                        <span className="text-sm text-gray-300 dark:text-gray-400">{item.place}</span>
-                                    </div>
-                                    <div className="flex flex-col text-right">
-                                        <span className="text-sm text-gray-300 font-semibold">{item.time}</span>
-                                        <span className="text-sm text-gray-300 font-semibold">{item.location}</span>
-                                    </div>
+                                <div className="flex flex-col text-right">
+                                    <div className="text-sm text-gray-300 font-semibold">{item.time}</div>
+                                    <div className="text-sm text-gray-300 font-semibold">{item.time}</div>
                                 </div>
+
                             </div>
-                        </BackgroundGradient>
-                    </div>
-                ))}
-            </div>
+                        </div>
+                    </BackgroundGradient>
+                </div>
+            ))}
+
+
         </div>
-    )
+    </>
 }
 
 export default Experience

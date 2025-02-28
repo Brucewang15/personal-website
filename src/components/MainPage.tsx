@@ -35,7 +35,7 @@ const MainPage = () => {
 
                         <div className="mt-8 text-base md:text-xl lg:pr-20">
                             Hi! I&apos;m Bruce Wang, a Computer Science student at the University of Waterloo. 
-                            I&apos;m particularly interested in fullstack development, artificial intelligence, machine learning, and Brawl Stars.
+                            I&apos;m particularly interested in fullstack development, artificial intelligence and machine learning.
                         </div>
                     </div>
 
