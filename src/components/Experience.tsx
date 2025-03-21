@@ -5,12 +5,20 @@ import hppn from './pictures/hppn_logo.jpg'
 import warg from './pictures/warg_logo.jpg'
 import first from './pictures/first_logo3.jpg'
 import tid from './pictures/topinfodev.png'
+import plato from './pictures/plato.png'
 import { JSX } from "react"
 import Image from "next/image"
 
 const Experience = () => {
 
     const items: { icon: JSX.Element, job: string, place: string, time: string, location: string }[] = [
+        {
+            icon: <Image src={plato} alt="icon" className="rounded-full h-14 w-auto" />,
+            job: 'Software Engineer Intern',
+            place: 'Plato Technologies',
+            time: 'May 2025 - August 2025',
+            location: 'San Francisco, CA'
+        },
         {
             icon: <Image src={hppn} alt="icon" className="rounded-full h-14 w-auto" />,
             job: 'Software Engineer Intern',
