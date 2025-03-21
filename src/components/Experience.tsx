@@ -2,8 +2,8 @@
 
 import { BackgroundGradient } from "./ui/background-gradient"
 import hppn from './pictures/hppn_logo.jpg'
-import warg from './pictures/warg_logo.jpg'
-import first from './pictures/first_logo3.jpg'
+// import warg from './pictures/warg_logo.jpg'
+// import first from './pictures/first_logo3.jpg'
 import tid from './pictures/topinfodev.png'
 import plato from './pictures/plato.png'
 import { JSX } from "react"
