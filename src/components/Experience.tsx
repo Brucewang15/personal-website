@@ -13,7 +13,7 @@ const Experience = () => {
 
     const items: { icon: JSX.Element, job: string, place: string, time: string, location: string }[] = [
         {
-            icon: <Image src={plato} alt="icon" className="rounded-full h-14 w-auto" />,
+            icon: <Image src={plato} alt="icon" className="rounded-full h-14 w-auto bg-white" />,
             job: 'Software Engineer Intern',
             place: 'Plato Technologies',
             time: 'May 2025 - August 2025',
@@ -27,13 +27,13 @@ const Experience = () => {
             location: 'Waterloo, ON'
 
         },
-        {
-            icon: <Image src={warg} alt="icon" className="rounded-full h-14 w-auto" />,
-            job: 'Autonomy Software Engineer',
-            place: "Waterloo Aerial Robotics Group",
-            time: 'Sept 2024 - Present',
-            location: 'Waterloo, ON'
-        },
+        // {
+        //     icon: <Image src={warg} alt="icon" className="rounded-full h-14 w-auto" />,
+        //     job: 'Autonomy Software Engineer',
+        //     place: "Waterloo Aerial Robotics Group",
+        //     time: 'Sept 2024 - Present',
+        //     location: 'Waterloo, ON'
+        // },
         {
             icon: <Image src={tid} alt="icon" className="rounded-full h-14 w-14 object-scale-down bg-white" />,
             job: 'Full-Stack Engineer Intern',
@@ -42,13 +42,13 @@ const Experience = () => {
             location: 'Vancouver, BC'
 
         },
-        {
-            icon: <Image src={first} alt="icon" className="rounded-full h-14 w-14 bg-white object-contain" />,
-            job: 'Lead Robotics Engineer',
-            place: "FIRST Tech Challenge",
-            time: 'Sept 2020 - Feb 2024',
-            location: 'Coquitlam, BC'
-        }
+        // {
+        //     icon: <Image src={first} alt="icon" className="rounded-full h-14 w-14 bg-white object-contain" />,
+        //     job: 'Lead Robotics Engineer',
+        //     place: "FIRST Tech Challenge",
+        //     time: 'Sept 2020 - Feb 2024',
+        //     location: 'Coquitlam, BC'
+        // }
     ]
 
     return <>
